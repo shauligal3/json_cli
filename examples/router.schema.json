@@ -1,0 +1,28 @@
+{
+    "is-schema": 1,
+    "_comment": "Example schema for a small network device. Keys starting with '_' are ignored.",
+    "hostname": {"type": "string"},
+    "logging": {
+        "level": {"type": "enum", "values": ["debug", "info", "warning", "error"]},
+        "remote-host": {"type": "string", "multi": 1},
+        "verbose": {"type": "bool"}
+    },
+    "interfaces": {
+        "array-list": {
+            "values": {
+                "description": {"type": "string"},
+                "mtu": {"type": "integer"},
+                "address": {"type": "string", "multi": 1},
+                "enabled": {"type": "bool"}
+            }
+        }
+    },
+    "users": {
+        "dict-list": {
+            "values": {
+                "role": {"type": "enum", "values": ["admin", "operator", "viewer"]},
+                "shell": {"type": "string"}
+            }
+        }
+    }
+}
