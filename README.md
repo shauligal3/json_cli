@@ -160,3 +160,7 @@ mypy                  # strict type checking
 ```
 
 CI runs all of the above on Python 3.9 – 3.13 for every push and pull request.
+
+## License
+
+Released under the [MIT License](LICENSE).
